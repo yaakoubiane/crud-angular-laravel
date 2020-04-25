@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Users List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Email</th>
+            <th>Adresse</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.id}} </td>
+            <td> {{user.nom}}</td>
+            <td> {{user.prenom}}</td>
+            <td> {{user.email}}</td>
+            <td> {{user.adresse}}</td>
+            <td> 
+              <a (click)="userDetails(user.id)" class="btn btn-info" >Show</a>
+              <a (click)="deleteUser(user.id)" class="btn btn-danger" >Delete</a>
+              <a (click)="EditUser(user.id)" class="btn btn-success" >Update</a>
+            </td>
+            <td>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

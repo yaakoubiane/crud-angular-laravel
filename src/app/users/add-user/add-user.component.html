@@ -1,0 +1,36 @@
+<h3>Créer User</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nom</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="user.nom" name="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Prenom</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="user.prenom" name="prenon">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="email" class="form-control" id="name" required [(ngModel)]="user.email" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Password</label>
+        <input type="password" class="form-control" id="name" required [(ngModel)]="user.password" name="password">
+      </div>
+
+    <div class="form-group">
+        <label for="name">Adresse</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="user.adresse" name="adresse">
+        <input type="hidden" class="form-control" id="name" required [(ngModel)]="user.type" name="type" value="employee">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
